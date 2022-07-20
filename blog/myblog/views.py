@@ -1,7 +1,7 @@
 from distutils.command.build_scripts import first_line_re
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
-from .forms import PostForm
+from .forms import PostForm, EditForm
 
 from .models import Post
 
@@ -28,5 +28,6 @@ class AddPostView(CreateView):
 
 class UpdatePostView(UpdateView):
     model = Post
+    form_class = EditForm
     template_name = 'update_post.html'
-    fields = ['title', 'title_tag', 'body']
+    # fields = ['title', 'title_tag', 'body']
