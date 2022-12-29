@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% block title %} Blog Page {% endblock %}
+ {% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+ {% endblock %}
+  {% block content %}
+<section id="welcome">
+  <header>
+    <img src="{% static 'blog/images/yawar.png' %}" alt="Yawar - The author of this blog" />
+    <h2>YAWAR'S BLOG</h2>
+  </header>
+  <p>Hello I'm Yawar and I love to blog about tech and world!</p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+  <ul>
+    {% for post in posts %}
+        {% include 'blog/includes/post.html' %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="about">
+  <h2>What I do</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis nam
+    voluptas ab, dolor earum repellat molestias vero. Animi fugiat quo, maxime
+    perferendis, praesentium minus explicabo enim quos modi accusantium
+    exercitationem.
+  </p>
+  <p>
+    My goal is to keep growing as a developer
+  </p>
+</section>
+{% endblock %}  
