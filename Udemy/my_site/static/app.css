@@ -35,8 +35,9 @@ h3 {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  margin-left: 1rem;
 }
-
+x
 #main-navigation a:hover,
 #main-navigation a:active {
   color: #cf79f1;
